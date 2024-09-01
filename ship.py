@@ -1,8 +1,10 @@
 import pygame
+from pygame.sprite import Sprite
 
-class Ship:
+class Ship(Sprite):
     def __init__(self, ai_game):
         """Initialize the ship and set its starting position."""
+        super().__init__()
         self.setting = ai_game.setting  # Access settings without parentheses
         self.screen = ai_game.screen
         self.screen_rect = ai_game.screen.get_rect()
